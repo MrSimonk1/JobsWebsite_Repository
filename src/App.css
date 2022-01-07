@@ -224,6 +224,29 @@
   transition: 0.2s;
 }
 
+.styleTextarea {
+  display: flex;
+  color: #656565;
+}
+
+.styleTextarea div {
+  width: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.styleTextarea span {
+  border: 1px solid rgb(246,247,247);
+  padding: 1px 2px 2px 1px;
+  height: 70%;
+}
+
+.styleTextarea span:hover {
+  cursor: pointer;
+  border-color: #c9c9c9;
+}
+
 .haveAnAccountDiv {
   width: 98% !important;
   display: flex;

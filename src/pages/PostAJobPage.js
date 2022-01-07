@@ -1,4 +1,12 @@
 import React, {useRef, useState} from 'react';
+import {GoBold} from "react-icons/go";
+import {FaItalic} from "react-icons/fa";
+import {MdFormatListBulleted} from "react-icons/md";
+import {MdFormatListNumbered} from "react-icons/md";
+import {CgInsertAfterO} from "react-icons/cg";
+import {FaRemoveFormat} from "react-icons/fa";
+import {BiUndo} from "react-icons/bi";
+import {BiRedo} from "react-icons/bi"
 
 const PostAJobPage = ({fnPost}) => {
 
@@ -112,7 +120,41 @@ const PostAJobPage = ({fnPost}) => {
             <div className="d-flex f-column">
                 <p>DESCRIPTION</p>
                 <div className="styleTextarea">
-                    asdads
+                    <div>
+                        <span>
+                           <GoBold/>
+                        </span>
+                        <span>
+                            <FaItalic/>
+                        </span>
+                    </div>
+                    <div className="borderBoth">
+                        <span>
+                            <MdFormatListBulleted/>
+                        </span>
+                        <span>
+                            <MdFormatListNumbered/>
+                        </span>
+
+                    </div>
+                    <div className="borderRight">
+                        <span>
+                            <CgInsertAfterO/>
+                        </span>
+                        <span>
+                            <FaRemoveFormat/>
+                        </span>
+
+                    </div>
+                    <div>
+                        <span>
+                            <BiUndo/>
+                        </span>
+                        <span>
+                            <BiRedo/>
+                        </span>
+
+                    </div>
                 </div>
                 <textarea ref={description}>
 
@@ -130,7 +172,41 @@ const PostAJobPage = ({fnPost}) => {
             <div className="d-flex f-column">
                 <p>DESCRIPTION <span className="postOptional">(OPTIONAL)</span></p>
                 <div className="styleTextarea">
-                    asdads
+                    <div>
+                        <span>
+                           <GoBold/>
+                        </span>
+                        <span>
+                            <FaItalic/>
+                        </span>
+                    </div>
+                    <div className="borderBoth">
+                        <span>
+                            <MdFormatListBulleted/>
+                        </span>
+                        <span>
+                            <MdFormatListNumbered/>
+                        </span>
+
+                    </div>
+                    <div className="borderRight">
+                        <span>
+                            <CgInsertAfterO/>
+                        </span>
+                        <span>
+                            <FaRemoveFormat/>
+                        </span>
+
+                    </div>
+                    <div>
+                        <span>
+                            <BiUndo/>
+                        </span>
+                        <span>
+                            <BiRedo/>
+                        </span>
+
+                    </div>
                 </div>
                 <textarea ref={companyDescription}>
 
