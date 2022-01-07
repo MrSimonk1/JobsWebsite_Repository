@@ -280,7 +280,13 @@ function App() {
                     <PreviewPage fnSelectOneJob={selectOneJob}/>
                 </JobsContext.Provider>}/>
                 <Route path="/post-job" element={<PostAJobPage fnPost={postJob}/>}/>
-                <Route path="/find-job" element={<FindAJobPage allJobs={getAllJobs} fnSelectOneJob={selectOneJob}/>}/>
+                <Route path="/find-job" element={<FindAJobPage allJobs={getAllJobs}
+                                                               fnSelectOneJob={selectOneJob}
+                                                               fnCheck={checkBox}
+                                                               checked={getCheckedFilters}
+                                                               filteredJobs={getFilteredJobs}
+                                                               needToFiler={getNeedToFilter}
+                                                               fnFilterByInputs={filterByInputs}/>}/>
                 <Route path="/one-job/:title" element={<OneJobPage oneJob={getOneJob}/>}/>
             </Routes>
 

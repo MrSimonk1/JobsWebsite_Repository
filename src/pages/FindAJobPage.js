@@ -16,7 +16,7 @@ const FindAJobPage = ({allJobs,
     const categoryFilter = useRef();
 
     function navigateToOneJob(num, title) {
-        {navigate(`/one-job/${title}`)}
+        {navigate(`/one-job/${title}`)};
         fnSelectOneJob(num);
     }
 
@@ -24,8 +24,8 @@ const FindAJobPage = ({allJobs,
 
         function getDate(num) {
             const postDate = new Date(num);
-            const todaysDate = new Date();
-            const daysDifference = Math.floor((todaysDate - postDate) / (1000*60*60*24));
+            const todaysDate = new Date()
+            const daysDifference = Math.floor((todaysDate - postDate) / (1000*60*60*24))
             return daysDifference;
         }
 
