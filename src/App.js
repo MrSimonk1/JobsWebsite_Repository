@@ -15,7 +15,6 @@ import {useState} from "react";
 // make all jobs appear, when button "load more listings" pressed.
 // filter by keywords, region, category inputs.
 
-
 function App() {
 
   const jobsTest = [
@@ -165,9 +164,7 @@ function App() {
 
   function postJob(email, company, jobTitle, location, applicationEmail, region, type, category, featuredImage,
                    description, logo, companyDescription, facebook, linkedin, postDate) {
-
       const randomId = Math.round(Math.random()*9999999999999999);
-
       setAllJobs([...getAllJobs, {jobId: randomId,
           email: email.current.value,
           company: company.current.value,
@@ -283,13 +280,7 @@ function App() {
                     <PreviewPage fnSelectOneJob={selectOneJob}/>
                 </JobsContext.Provider>}/>
                 <Route path="/post-job" element={<PostAJobPage fnPost={postJob}/>}/>
-                <Route path="/find-job" element={<FindAJobPage allJobs={getAllJobs}
-                                                               filteredJobs={getFilteredJobs}
-                                                               needToFiler={getNeedToFilter}
-                                                               checked={getCheckedFilters}
-                                                               fnCheck={checkBox}
-                                                               fnFilterByInputs={filterByInputs}
-                                                               fnSelectOneJob={selectOneJob}/>}/>
+                <Route path="/find-job" element={<FindAJobPage allJobs={getAllJobs} fnSelectOneJob={selectOneJob}/>}/>
                 <Route path="/one-job/:title" element={<OneJobPage oneJob={getOneJob}/>}/>
             </Routes>
 

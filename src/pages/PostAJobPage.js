@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 
 const PostAJobPage = ({fnPost}) => {
 
@@ -16,8 +16,10 @@ const PostAJobPage = ({fnPost}) => {
     const companyDescription = useRef();
     const facebook = useRef();
     const linkedin = useRef();
+    const [getErrorVisibility, setErrorVisibility] = useState("hidden");
 
     function postJob() {
+
         if (company.current.value.length > 0
         && applicationEmail.current.value.length > 0
         && category.current.value.length > 0
@@ -27,8 +29,9 @@ const PostAJobPage = ({fnPost}) => {
                 fnPost(email, company, jobTitle, location, applicationEmail, region, type, category, featuredImage, description, logo, companyDescription, facebook, linkedin, postDate);
         }
         else {
-            alert("false")
+            setErrorVisibility("visible")
         }
+
     }
 
     return (
@@ -149,6 +152,7 @@ const PostAJobPage = ({fnPost}) => {
                 <button onClick={postJob}>SAVE DRAFT</button>
             </div>
 
+            <h2 style={{visibility: `${getErrorVisibility}`}}>Validation Error - please fill all required fields.</h2>
 
         </div>
     );
